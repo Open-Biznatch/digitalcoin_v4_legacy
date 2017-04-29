@@ -138,7 +138,6 @@ QT_MOC_CPP = \
   moc_rpcconsole.cpp \
   moc_sendcoinsdialog.cpp \
   moc_sendcoinsentry.cpp \
-  moc_serveur.cpp \
   moc_signverifymessagedialog.cpp \
   moc_splashscreen.cpp \
   moc_trafficgraphwidget.cpp \
@@ -206,7 +205,6 @@ BITCOIN_QT_H = \
   rpcconsole.h \
   sendcoinsdialog.h \
   sendcoinsentry.h \
-  serveur.h \
   signverifymessagedialog.h \
   splashscreen.h \
   trafficgraphwidget.h \
@@ -309,7 +307,6 @@ BITCOIN_QT_CPP += \
   recentrequeststablemodel.cpp \
   sendcoinsdialog.cpp \
   sendcoinsentry.cpp \
-  serveur.cpp \
   signverifymessagedialog.cpp \
   transactiondesc.cpp \
   transactiondescdialog.cpp \

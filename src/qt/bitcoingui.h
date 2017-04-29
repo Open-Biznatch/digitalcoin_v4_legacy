@@ -161,8 +161,6 @@ private slots:
 #ifdef ENABLE_WALLET
     /** Switch to overview (home) page */
     void gotoOverviewPage();
-	/** Switch to overview (home) page */
-    void reloadUi();
     /** Switch to history (transactions) page */
     void gotoHistoryPage();
     /** Switch to Block Browser Page */

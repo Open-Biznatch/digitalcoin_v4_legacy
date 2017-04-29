@@ -64,18 +64,14 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0xecb2c595fff9f2364152c32027737007c5a4c60ec960cf93754b0211bc2a1501"));
 
         vSeeds.push_back(CDNSSeedData("digitalcoin.co seed #1", "digitalcoin.co"));        
-		vSeeds.push_back(CDNSSeedData("digitalcoin.co seed #2", "game.digitalcoin.co"));
-		vSeeds.push_back(CDNSSeedData("digitalcoin.co seed #3", "dev.digitalcoin.co"));
-		vSeeds.push_back(CDNSSeedData("ahmed seed #1", "178.62.28.81"));
-        //vSeeds.push_back(CDNSSeedData("digihash.co seed #3", "seed3.digihash.co"));
-        //vSeeds.push_back(CDNSSeedData("love2hash.com seed #4", "seed4.love2hash.com"));
-        //vSeeds.push_back(CDNSSeedData("digiexplorer.info seed #5", "seed5.digiexplorer.info"));
+	vSeeds.push_back(CDNSSeedData("digitalcoin.co seed #2", "game.digitalcoin.co"));
+	vSeeds.push_back(CDNSSeedData("digitalcoin.co seed #3", "dev.digitalcoin.co"));
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of(30);
         base58Prefixes[SCRIPT_ADDRESS] = list_of(5);
-        base58Prefixes[SECRET_KEY] =     list_of(0x9e);
-        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E);
-        base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4);
+        base58Prefixes[SECRET_KEY] =     list_of(0x9e).to_adapter();
+        base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E).to_adapter();
+        base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4).to_adapter();
 
         // Convert the pnSeeds array into usable address objects.
         for (unsigned int i = 0; i < ARRAYLEN(pnSeed); i++)

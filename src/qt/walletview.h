@@ -15,8 +15,6 @@ class SendCoinsDialog;
 class SendCoinsRecipient;
 class TransactionView;
 class WalletModel;
-class ExchangeBrowser;
-class ChatWindow;
 class BlockBrowser;
 
 QT_BEGIN_NAMESPACE

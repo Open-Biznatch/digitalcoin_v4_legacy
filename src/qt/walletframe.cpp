@@ -190,12 +190,6 @@ void WalletFrame::usedSendingAddresses()
         walletView->usedSendingAddresses();
 }
 
-void WalletFrame::reloadUi(){
-    WalletView *walletView = currentWalletView();
-    if (walletView)
-        walletView->reloadUi();
-}
-
 void WalletFrame::usedReceivingAddresses()
 {
     WalletView *walletView = currentWalletView();
@@ -207,4 +201,3 @@ WalletView *WalletFrame::currentWalletView()
 {
     return qobject_cast<WalletView*>(walletStack->currentWidget());
 }
-

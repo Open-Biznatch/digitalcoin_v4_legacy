@@ -572,11 +572,6 @@ void BitcoinGUI::showHelpMessageClicked()
 }
 
 #ifdef ENABLE_WALLET
-void BitcoinGUI::reloadUi()
-{
-    if (walletFrame) walletFrame->reloadUi();
-}
-
 void BitcoinGUI::openClicked()
 {
     OpenURIDialog dlg(this);

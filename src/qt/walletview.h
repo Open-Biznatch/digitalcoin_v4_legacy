@@ -54,9 +54,7 @@ public:
 private:
     ClientModel *clientModel;
     WalletModel *walletModel;
-	ChatWindow *chatWindow;
-	ExchangeBrowser *exchangeBrowser;
-	BlockBrowser *blockBrowser;
+    BlockBrowser *blockBrowser;
 
     OverviewPage *overviewPage;
     QWidget *transactionsPage;
@@ -75,15 +73,10 @@ public slots:
     void gotoOverviewPage();
     /** Switch to history (transactions) page */
     void gotoHistoryPage();
-    /** Switch to chat page */
-    void gotoChatPage();
-    /** Switch to exchange browser page */
-    void gotoExchangeBrowserPage();	
     /** Switch to receive coins page */
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage(QString addr = "");
-
     /** Switch to block explorer page */
     void gotoBlockBrowserPage();
 

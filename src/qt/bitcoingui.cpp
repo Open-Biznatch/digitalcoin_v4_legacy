@@ -305,8 +305,6 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     signMessageAction->setStatusTip(tr("Sign messages with your Digitalcoin addresses to prove you own them"));
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
     verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Digitalcoin addresses"));
-	reloadUiAction = new QAction(QIcon(":/icons/notsynced"), tr("&Reload UI..."), this);
-    reloadUiAction->setStatusTip(tr("Reloads your stylesheet.qss"));
     openRPCConsoleAction = new QAction(QIcon(":/icons/debugwindow"), tr("&Debug window"), this);
     openRPCConsoleAction->setStatusTip(tr("Open debugging and diagnostic console"));
 
@@ -337,7 +335,6 @@ void BitcoinGUI::createActions(bool fIsTestnet)
         connect(verifyMessageAction, SIGNAL(triggered()), this, SLOT(gotoVerifyMessageTab()));
         connect(usedSendingAddressesAction, SIGNAL(triggered()), walletFrame, SLOT(usedSendingAddresses()));
         connect(usedReceivingAddressesAction, SIGNAL(triggered()), walletFrame, SLOT(usedReceivingAddresses()));
-	connect(reloadUiAction, SIGNAL(triggered()), walletFrame, SLOT(reloadUi()));
         connect(openAction, SIGNAL(triggered()), this, SLOT(openClicked()));
 	connect(blockAction, SIGNAL(triggered()), this, SLOT(gotoBlockBrowser()));
     }
@@ -366,8 +363,6 @@ void BitcoinGUI::createMenuBar()
         file->addAction(usedSendingAddressesAction);
         file->addAction(usedReceivingAddressesAction);
         file->addSeparator();
-	file->addAction(reloadUiAction);
-	file->addSeparator();
     }
     file->addAction(quitAction);
 

@@ -195,14 +195,6 @@ void WalletView::gotoReceiveCoinsPage()
     setCurrentWidget(receiveCoinsPage);
 }
 
-void WalletView::reloadUi()
-{
-    QFile qss("stylesheet.qss");
-	qss.open(QFile::ReadOnly);
-	setStyleSheet(qss.readAll());
-	qss.close();
-}
-
 void WalletView::gotoSendCoinsPage(QString addr)
 {
     setCurrentWidget(sendCoinsPage);

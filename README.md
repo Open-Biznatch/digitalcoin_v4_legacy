@@ -7,7 +7,7 @@ sudo apt-get install libboost-all-dev
 
 sudo apt-get install libdb4.8-dev
 
-git clone https://github.com/arthearts/digitalcoin,git
+git clone https://github.com/arthearts/digitalcoin.git
 
 cd digitalcoin
 

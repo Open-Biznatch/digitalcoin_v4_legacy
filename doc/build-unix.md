@@ -246,3 +246,29 @@ In this case there is no dependency on Berkeley DB 4.8.
 Mining is also possible in disable-wallet mode, but only using the `getblocktemplate` RPC
 call not `getwork`.
 
+On Debian 8.7
+-------------
+(sudo) apt-get install build-essential libtool autotools-dev autoconf pkg-config libssl-dev git
+
+(only install the necessary libboost packages)
+apt-get install libboost-system-dev libboost-dev libboost-test-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev
+
+If you must install all of them, but you don't have to: sudo apt-get install libboost-all-dev (about 83 of them)
+
+sudo apt-get install libdb++-dev
+sudo apt-get install libdb4.8-dev (is not available on Debian 8.7)
+
+git clone https://github.com/arthearts/digitalcoin.git
+
+cd digitalcoin
+
+./autogen.sh
+
+If you're NOT using libdb4.8-dev
+./configure --with-incompatible-bdb (without the switch if you are using the 4.Cool
+
+make
+
+cd src
+
+sudo cp digitalcoind /usr/bin

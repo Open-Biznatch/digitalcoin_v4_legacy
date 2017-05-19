@@ -265,7 +265,7 @@ cd digitalcoin
 ./autogen.sh
 
 If you're NOT using libdb4.8-dev
-./configure --with-incompatible-bdb (without the switch if you are using the 4.Cool
+./configure --with-incompatible-bdb
 
 make
 

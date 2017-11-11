@@ -36,7 +36,7 @@ BittrexOrders* _bittrexOrders = new BittrexOrders();
 ExchangeBrowser::ExchangeBrowser(QWidget* parent) : QWidget(parent), ui(new Ui::ExchangeBrowser)
 {
     //TODO: Complete multi-threading so we don't have to call this as a primer
-    getRequest(apiCoinbasePrice);
+    //getRequest(apiCoinbasePrice);
 
     ui->setupUi(this);
     setFixedSize(500, 420);

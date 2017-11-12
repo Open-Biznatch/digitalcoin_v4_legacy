@@ -15,8 +15,6 @@ class SendCoinsDialog;
 class SendCoinsRecipient;
 class TransactionView;
 class WalletModel;
-class ExchangeBrowser;
-class ChatWindow;
 class BlockBrowser;
 
 QT_BEGIN_NAMESPACE
@@ -56,9 +54,7 @@ public:
 private:
     ClientModel *clientModel;
     WalletModel *walletModel;
-	ChatWindow *chatWindow;
-	ExchangeBrowser *exchangeBrowser;
-	BlockBrowser *blockBrowser;
+    BlockBrowser *blockBrowser;
 
     OverviewPage *overviewPage;
     QWidget *transactionsPage;
@@ -77,15 +73,10 @@ public slots:
     void gotoOverviewPage();
     /** Switch to history (transactions) page */
     void gotoHistoryPage();
-    /** Switch to chat page */
-    void gotoChatPage();
-    /** Switch to exchange browser page */
-    void gotoExchangeBrowserPage();	
     /** Switch to receive coins page */
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage(QString addr = "");
-
     /** Switch to block explorer page */
     void gotoBlockBrowserPage();
 
@@ -93,7 +84,6 @@ public slots:
     void gotoSignMessageTab(QString addr = "");
     /** Show Sign/Verify Message dialog and switch to verify message tab */
     void gotoVerifyMessageTab(QString addr = "");
-	void reloadUi();
     /** Show incoming transaction notification for new transactions.
  
         The new items are those between start and end inclusive, under the given parent item.

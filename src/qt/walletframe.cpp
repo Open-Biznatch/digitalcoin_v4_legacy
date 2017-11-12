@@ -119,21 +119,6 @@ void WalletFrame::gotoHistoryPage()
         i.value()->gotoHistoryPage();
 }
 
-void WalletFrame::gotoChatPage()
-{
-    QMap<QString, WalletView*>::const_iterator i;
-    for (i = mapWalletViews.constBegin(); i != mapWalletViews.constEnd(); ++i)
-        i.value()->gotoChatPage();
-}
-
-void WalletFrame::gotoExchangeBrowserPage()
-{
-    QMap<QString, WalletView*>::const_iterator i;
-    for (i = mapWalletViews.constBegin(); i != mapWalletViews.constEnd(); ++i)
-        i.value()->gotoExchangeBrowserPage();
-}
-
-
 void WalletFrame::gotoReceiveCoinsPage()
 {
     QMap<QString, WalletView*>::const_iterator i;
@@ -205,12 +190,6 @@ void WalletFrame::usedSendingAddresses()
         walletView->usedSendingAddresses();
 }
 
-void WalletFrame::reloadUi(){
-    WalletView *walletView = currentWalletView();
-    if (walletView)
-        walletView->reloadUi();
-}
-
 void WalletFrame::usedReceivingAddresses()
 {
     WalletView *walletView = currentWalletView();
@@ -222,4 +201,3 @@ WalletView *WalletFrame::currentWalletView()
 {
     return qobject_cast<WalletView*>(walletStack->currentWidget());
 }
-

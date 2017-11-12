@@ -2,9 +2,13 @@ DigitalCoin v4 Ubuntu Build
 =====================================
 
 sudo apt-get install -y git
+
 git clone https://github.com/lomtax/digitalcoin.git
+
 cd digitalcoin
+
 sudo ./SetupDependencies.sh
+
 sudo ./BuildAndRun.sh
 
 Digitalcoin integration/staging tree

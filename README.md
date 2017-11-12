@@ -1,26 +1,11 @@
-DigitalCoin v3 Ubuntu Build
+DigitalCoin v4 Ubuntu Build
 =====================================
 
-sudo apt-get install build-essential libtool autotools-dev autoconf pkg-config libssl-dev git
-
-sudo apt-get install libboost-all-dev
-
-sudo apt-get install libdb4.8-dev
-
-git clone https://github.com/DGCDev/digitalcoin.git
-
+sudo apt-get install -y git
+git clone https://github.com/lomtax/digitalcoin.git
 cd digitalcoin
-
-./autogen.sh
-
-./configure
-
-make
-
-cd src
-
-sudo cp digitalcoind /usr/bin
-
+sudo ./SetupDependencies.sh
+sudo ./BuildAndRun.sh
 
 Digitalcoin integration/staging tree
 =====================================

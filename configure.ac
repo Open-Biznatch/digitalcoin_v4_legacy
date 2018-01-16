@@ -373,10 +373,10 @@ if test x$use_hardening != xno; then
     AX_CHECK_LINK_FLAG([[-pie]], [HARDENED_LDFLAGS="$HARDENED_LDFLAGS -pie"])
   fi
 
-  CXXFLAGS="-std=c++11 $CXXFLAGS $HARDENED_CXXFLAGS"
+  CXXFLAGS="-std=c++11 -DBOOST_NO_CXX11_SCOPED_ENUMS $CXXFLAGS $HARDENED_CXXFLAGS"
   CPPFLAGS="$CPPFLAGS $HARDENED_CPPFLAGS"
   LDFLAGS="$LDFLAGS $HARDENED_LDFLAGS"
-  OBJCXXFLAGS="-std=c++11 $CXXFLAGS"
+  OBJCXXFLAGS="-std=c++11 -DBOOST_NO_CXX11_SCOPED_ENUMS $CXXFLAGS"
 fi
 
 dnl this flag screws up non-darwin gcc even when the check fails. special-case it.

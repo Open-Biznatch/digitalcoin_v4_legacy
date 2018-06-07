@@ -1432,7 +1432,7 @@ unsigned int GetNextWorkRequiredV2(const CBlockIndex* pindexLast, const CBlockHe
     LogPrintf("Proof Of Work Limit For Algo %i, is % i", algo, nProofOfWorkLimit);
 
     // Genesis block
-    if (pindexLast == NULL)
+    if (pindexLast == NULL || (pindexLast->nHeight >= 3301556 && pindexLast->nHeight < 3301560))
         return nProofOfWorkLimit;
 
     // find first block in averaging interval
